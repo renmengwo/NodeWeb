@@ -7,7 +7,6 @@ const mimeModel = require('./static/model/common.js')
 // 2.创建一个http服务对象监听用户请求的事件（req）
 http.createServer(function(req,res){
     let pathname = url.parse(req.url).pathname; // 处理链接上带有的参数，例如：/aa.html?aaa=s，修改为aa.html
-    console.log(pathname);
     if (pathname === '/') { // 默认加载首页
         pathname = '/index.html'
     }
@@ -26,7 +25,7 @@ http.createServer(function(req,res){
                     res.end();  // 对于每一个请求服务器必须结束响应，否则客户端（浏览器）会一直等待服务器响应
                 })
             } else {
-                const mime = mimeModel.getFileMime(extname);
+                const mime = mimeModel.getFileMime(fs, extname);
                 res.writeHead(200,{"Content-Type":`${mime};charset='utf-8'`}); // 设置返回头的报文,根据不同的后缀名返回不同的报文类型
                 res.write(data);
                 res.end();  // 对于每一个请求服务器必须结束响应，否则客户端（浏览器）会一直等待服务器响应
