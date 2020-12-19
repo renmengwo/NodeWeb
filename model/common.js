@@ -20,7 +20,7 @@ function getFileMime (fs, extname) { /*获取文件后缀名设置返回头的�
         return MimeData[extname] || 'text/plain'
     }) */
 
-    const Mimes = fs.readFileSync('./static/json/mime.json');
+    const Mimes = fs.readFileSync('./json/mime.json');
     const MimeData = JSON.parse(Mimes.toString());
     return MimeData[extname] || 'text/plain'
 }
