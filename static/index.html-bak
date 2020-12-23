@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历</title>
+    <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
+</head>
+<body>
+<nav class="topbox">
+    <ul class="navlist" id="menu">
+        <li data-menuanchor="page1" class="active"><a href="#page1">基本资料</a></li>
+        <li data-menuanchor="page2"><a href="#page2">专业技能</a></li>
+        <li data-menuanchor="page3"><a href="#page3">工作经历</a></li>
+        <li data-menuanchor="page4"><a href="#page4">项目经历</a></li>
+    </ul>
+</nav>
+<div id="fullpage">
+    <div class="section active">
+        <section class="basic-infor topbox">
+            <aside class="topbox">
+                <h2>刘欢</h2><p>（web前端开发工程师）</p>
+            </aside>
+            <aside class="contact-infor">
+                <span>电话:13121756897</span><span>QQ：936777550</span><span>邮箱：936777550@qq.com</span>
+            </aside>
+        </section>
+        <section class="flexbox">
+            <aside><img src="images/icno.jpg" alt="照片" width="120"></aside>
+            <section>
+                <p>毕业院校/专业：就读于湖北警官学院，专业为计算机科学与技术</p>
+                <p>求职意向：web前端开发工程师</p>
+                <p>工作经验：4年</p>
+            </section>
+        </section>
+        <section class="specific">
+            4年的前端开发，熟悉w3c标准，熟悉不同浏览器兼容方法，开发过
+            网站，小程序，公司管理系统，专题活动页，对流行技术有一定的钻
+            研精神,在公司负责带领团队开发内部系统，分配任务，代码review。
+            目前是在职状态。
+        </section>
+        <img src="images/1.png" alt="角" class="top-img01">
+        <img src="images/2.png" alt="角" class="top-img02">
+        <img src="images/3.png" alt="角" class="top-img03">
+        <img src="images/4.png" alt="角" class="top-img04">
+    </div>
+    <div class="section">
+        <ul >
+            <li>熟悉html，css，jquery，scss，开发过大型网站（）</li>
+            <li>熟悉node</li>
+            <li>自己的博客: <a href="www.afreelive.com">www.afreelive.com</a> </li>
+            <li>了解nginx</li>
+            <li>熟悉koa,express</li>
+        </ul>
+    </div>
+    <div class="section">
+        <ul>
+            <li>北京中公教育科技有限公司：2016年-至今</li>
+            <li>北京中公教育科技有限公司：2016年-至今</li>
+            <li>北京中公教育科技有限公司：2016年-至今</li>
+            <li>北京中公教育科技有限公司：2016年-至今</li>
+            <li>北京中公教育科技有限公司：2016年-至今</li>
+        </ul>
+    </div>
+    <div class="section">
+        <section class="slide">
+            日常的网站开发：中公教育主站（www.offcn.com）,中公教育分校地方站
+            日常的活动专题制作
+        </section>
+        <section class="slide">
+            erp系统
+        </section>
+        <section class="slide">
+            rcs系统
+        </section>
+        <section class="slide">
+            bss系统
+        </section>
+        <section class="slide">
+            occ系统
+        </section>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            // sectionsColor: ['#fff', '#4BBFC3', '#7BAABE', '#f90'],
+            continuousVertical: true,
+            controlArrowColor: '#ff0000',
+            loopHorizontal: true,
+            'navigation': true,
+            anchors: ['page1', 'page2', 'page3', 'page4'],
+            menu: '#menu',
+        });
+    });
+</script>
+</body>
+</html>
